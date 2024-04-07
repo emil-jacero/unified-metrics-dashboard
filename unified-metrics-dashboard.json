@@ -1,14 +1,4 @@
 {
-    "__inputs": [
-        {
-            "name": "DS_PROMETHEUS",
-            "label": "Prometheus",
-            "description": "",
-            "type": "datasource",
-            "pluginId": "prometheus",
-            "pluginName": "Prometheus"
-        }
-    ],
     "__elements": {},
     "__requires": [
         {
@@ -133,7 +123,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
+                "uid": "${datasource}"
             },
             "fieldConfig": {
                 "defaults": {
@@ -191,7 +181,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "count(minecraft_players_count{job=~\"^$job$\",instance=~\"^$instance$\"})",
@@ -207,7 +197,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
+                "uid": "${datasource}"
             },
             "fieldConfig": {
                 "defaults": {
@@ -266,7 +256,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "time()-avg(process_start_time_seconds{instance=~\"^$instance$\",job=~\"^$job$\"})",
@@ -282,7 +272,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
+                "uid": "${datasource}"
             },
             "fieldConfig": {
                 "defaults": {
@@ -340,7 +330,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "sum(minecraft_players_count{instance=~\"^$instance$\",job=~\"^$job$\"})",
@@ -356,7 +346,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
+                "uid": "${datasource}"
             },
             "fieldConfig": {
                 "defaults": {
@@ -414,7 +404,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "sum(minecraft_world_entities_count{instance=~\"^$instance$\",job=~\"^$job$\"})",
@@ -430,7 +420,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
+                "uid": "${datasource}"
             },
             "fieldConfig": {
                 "defaults": {
@@ -488,7 +478,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "sum(minecraft_world_loaded_chunks{instance=~\"^$instance$\",job=~\"^$job$\"})",
@@ -504,7 +494,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
+                "uid": "${datasource}"
             },
             "fieldConfig": {
                 "defaults": {
@@ -562,7 +552,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "count(minecraft_world_loaded_chunks{instance=~\"^$instance$\",job=~\"^$job$\"})",
@@ -1601,7 +1591,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
+                "uid": "${datasource}"
             },
             "description": "",
             "fieldConfig": {
@@ -1681,7 +1671,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "minecraft_world_loaded_chunks{instance=~\"^$instance$\",job=~\"^$job$\",world=\"$world\"}",
@@ -1696,7 +1686,7 @@
         {
             "datasource": {
                 "type": "prometheus",
-                "uid": "${DS_PROMETHEUS}"
+                "uid": "${datasource}"
             },
             "description": "",
             "fieldConfig": {
@@ -1776,7 +1766,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "minecraft_world_entities_count{instance=~\"^$instance$\",job=~\"^$job$\",world=\"$world\"}",
@@ -1787,7 +1777,7 @@
                 {
                     "datasource": {
                         "type": "prometheus",
-                        "uid": "${DS_PROMETHEUS}"
+                        "uid": "${datasource}"
                     },
                     "exemplar": true,
                     "expr": "minecraft_world_players_count{instance=~\"^$instance$\",job=~\"^$job$\",world=\"$world\"}",
@@ -2717,7 +2707,7 @@
                 "current": {},
                 "datasource": {
                     "type": "prometheus",
-                    "uid": "${DS_PROMETHEUS}"
+                    "uid": "${datasource}"
                 },
                 "definition": "query_result(minecraft_players_count)",
                 "hide": 0,
@@ -2742,7 +2732,7 @@
                 "current": {},
                 "datasource": {
                     "type": "prometheus",
-                    "uid": "${DS_PROMETHEUS}"
+                    "uid": "${datasource}"
                 },
                 "definition": "query_result(up{job=~\"^$job$\"})",
                 "hide": 0,
@@ -2846,7 +2836,7 @@
                 "current": {},
                 "datasource": {
                     "type": "prometheus",
-                    "uid": "${DS_PROMETHEUS}"
+                    "uid": "${datasource}"
                 },
                 "definition": "query_result(minecraft_world_entities_count{instance=~\"$instance\",job=~\"$job\"})",
                 "hide": 0,
